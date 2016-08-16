@@ -2,8 +2,8 @@
 @import "bootstrap";
 
 body {
-  padding-top: 20px;
-  background: url('/assets/weather.png');
+  padding-top: 5px;
+  background: url('/assets/giftly.png');
 }
 
 .booyah-box {
@@ -46,8 +46,8 @@ figcaption {
 }
 
 img {
-  width: 45px;
-  height: 45px;
+  width: 25px;
+  height: 25px;
 
 }
 
@@ -60,6 +60,7 @@ th {
 
 td {
   cursor: pointer;
+  background-color: #FFFFFF;
 }
 
 td.selected {
@@ -176,4 +177,53 @@ td.selected {
     padding-right: 0;
     padding-left: 0;
   }
+}
+
+@media only screen 
+    and (min-device-width : 375px) // or 213.4375em
+    and (max-device-width : 667px) // or 41.6875em
+
+{ 
+
+body {
+  
+  background-color: #FFFFFF;
+}
+
+.booyah-box {
+  display: none;
+}
+
+  th, td {
+  height: 40px;
+  width: 400px;  
+  text-align: center; 
+  align-items: center;
+  align-content: center;
+  padding: 10px;
+
+}
+
+td img {
+  display: inline;
+}
+
+figcaption {
+  text-align: center;
+  font-size: 6px;
+}
+
+img {
+  width: 22px;
+  height: 22px;
+
+}
+
+th {
+  font-size: 15px;
+  background-color: #4BCC3A;
+  color: #FFFFFF;
+  text-align: center;
+}
+
 }
