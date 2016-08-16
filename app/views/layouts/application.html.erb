@@ -8,7 +8,29 @@
 </head>
 <body>
 
-<%= yield %>
+<div class="container">
 
+      <!-- The justified navigation menu is meant for single line per list item.
+           Multiple lines will require custom code not provided by Bootstrap. -->
+      <div class="masthead">
+        <h2>Travel BINGO!</h2>
+        <nav>
+          <ul class="nav nav-justified">
+            <li class="nav-item"><a class="nav-link active" href="#">Airport Bingo: Easy</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Airport Bingo: Hard</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Road Trip Bingo: Easy</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Road Trip Bingo: Hard</a></li>
+          </ul>
+        </nav>
+      </div>
+
+<%= yield %>
+</div>
+<script type="text/javascript">
+        $('td').click(function(event) {
+          var targetId = event.currentTarget.id;
+          $('#' + targetId).toggleClass('selected');
+        });
+</script>
 </body>
 </html>
