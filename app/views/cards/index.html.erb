@@ -14,7 +14,8 @@
     <tr>
       <% 5.times do |col| %>  
         <% if row == 2 && col == 2 %> 
-        <td id=square1-0><img src="/assets/bingo.svg" /><figcaption>Kid Playing Bingo</figcaption></td>
+        <td id=square2-2><img src="/assets/bingo.svg" /><figcaption>Kid Playing Bingo</figcaption></td>
+        <% i = i-1 %>
         <% else %>
         <td id=<%= "square#{row}-#{col}" %>><%= image_tag @picture[i] %><figcaption><%= @caption[i] %></figcaption></td>  
         <% end %>

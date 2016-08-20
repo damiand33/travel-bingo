@@ -32,3 +32,4 @@ Card.create(image: 'plane-ticket.svg', caption: 'Plane Ticket', center_icon: fal
 Card.create(image: 'baby-bottle.svg', caption: 'Baby Bottle', center_icon: false)
 Card.create(image: 'person-sleeping.svg', caption: 'Person Sleeping', center_icon: false)
 Card.create(image: 'flowers.svg', caption: 'Flowers', center_icon: false)
+Card.create(image: 'flowers.svg', caption: 'Flowers', center_icon: false)
