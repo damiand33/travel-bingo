@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
-  root 'pages#index'
-  get "/pages/:page" => "pages#show"
+  root 'cards#index'
+  # get '/pages/airport-hard', :as => :hard
+  get 'about', to: 'cards#about'
+
+  #link_to :hard
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

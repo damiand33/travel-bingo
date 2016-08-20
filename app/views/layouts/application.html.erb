@@ -4,34 +4,36 @@
   <title>TravelBingo</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
 </head>
 <body>
 
-<div class="container">
+<header>
+  <div class="col-xs-10 col-xs-offset-1">
+  <%= image_tag 'bingo.png', class: 'img-title' %>
+    <div class="pull-right links"    
+    <!-- Button trigger modal -->
+    <%= link_to 'New Card', root_path %>
+    &nbsp;&nbsp;
+    <%= link_to 'About', about_path %>
+  </div>    
+  </div>
+</header>
+<br>
+<br>
+<br>
 
-      <!-- The justified navigation menu is meant for single line per list item.
-           Multiple lines will require custom code not provided by Bootstrap. -->
-      <div class="masthead">
-        <h2>Travel BINGO!</h2>
-        <nav>
-          <ul class="nav nav-justified">
-            <li class="nav-item"><a class="nav-link active" href="#">Airport Bingo: Easy</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Airport Bingo: Hard</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Road Trip Bingo: Easy</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Road Trip Bingo: Hard</a></li>
-          </ul>
-        </nav>
-      </div>
+<div class="container">
 
 <%= yield %>
 </div>
-<script type="text/javascript">
-        $('td').click(function(event) {
-          var targetId = event.currentTarget.id;
-          $('#' + targetId).toggleClass('selected');
-        });
+  <script type="text/javascript">
+    $('td').click(function(event) {
+    var targetId = event.currentTarget.id;
+    $('#' + targetId).toggleClass('selected');
+  });
 </script>
 </body>
 </html>
