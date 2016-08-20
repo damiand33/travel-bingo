@@ -5,38 +5,40 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1">  
 </head>
+
 <body>
-
-<header>
-  <div class="col-xs-10 col-xs-offset-1">
-  <%= image_tag 'bingo.png', class: 'img-title' %>
-    <div class="pull-right links"    
-    <!-- Button trigger modal -->
-    <%= link_to 'New Card', root_path %>
-    &nbsp;&nbsp;
-    <%= link_to 'About', about_path %>
-  </div>    
+  <header>
+    <div class="col-xs-10 col-xs-offset-1">
+      <%= link_to root_path do %>
+        <%= image_tag 'bingo.png', class: 'img-title' %>
+      <% end %>
+      <div class="pull-right links"    
+        <!-- Button trigger modal -->
+        <%= link_to 'New Card', root_path %>
+        &nbsp;&nbsp;
+        <%= link_to 'About', about_path %>
+      </div>    
+    </div>
+  </header>
+  <br>
+  <br>
+  <br>
+  <div class="container">
+    <%= yield %>
   </div>
-</header>
-<br>
-<br>
-<br>
 
-<div class="container">
-
-<%= yield %>
-</div>
   <script type="text/javascript">
     $('td').click(function(event) {
     var targetId = event.currentTarget.id;
     $('#' + targetId).toggleClass('selected');
   });
-</script>
+  </script>
 
-    <script language=JavaScript> var message="Function Disabled!"; function clickIE4(){ if (event.button==2){ alert(message); return false; } } function clickNS4(e){ if (document.layers||document.getElementById&&!document.all){ if (e.which==2||e.which==3){ alert(message); return false; } } } if (document.layers){ document.captureEvents(Event.MOUSEDOWN); document.onmousedown=clickNS4; } else if (document.all&&!document.getElementById){ document.onmousedown=clickIE4; } document.oncontextmenu=new Function("alert(message);return false") 
-    </script>
+  <script language=JavaScript> 
+    var message="Function Disabled!"; function clickIE4(){ if (event.button==2){ alert(message); return false; } } function clickNS4(e){ if (document.layers||document.getElementById&&!document.all){ if (e.which==2||e.which==3){ alert(message); return false; } } } if (document.layers){ document.captureEvents(Event.MOUSEDOWN); document.onmousedown=clickNS4; } else if (document.all&&!document.getElementById){ document.onmousedown=clickIE4; } document.oncontextmenu=new Function("alert(message);return false") 
+  </script>
+  
 </body>
 </html>
