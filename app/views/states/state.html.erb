@@ -1,0 +1,29 @@
+
+<br>
+<div class="table">
+  <table>
+    <tr>                            
+      <th>B</th>
+      <th>I</th>
+      <th>N</th>
+      <th>G</th>   
+      <th>O</th>
+    </tr> 
+
+    <% i = 0 %>     
+    <% 5.times do |row| %>
+      <tr>
+        <% 5.times do |col| %>  
+          <% if row == 2 && col == 2 %> 
+          <td id=square2-2><img src="/assets/bingo.svg" /><figcaption>Kid Playing Bingo</figcaption></td>
+          <% i = i-1 %>
+          <% else %>
+          <td id=<%= "square#{row}-#{col}" %>><%= image_tag @plate_picture[i] %><figcaption><%= @plate_caption[i] %></figcaption></td>  
+          <% end %>
+          <% i +=1 %>               
+        <% end %>                                
+      </tr> 
+    <% end %>  
+  </table>
+</div>
+

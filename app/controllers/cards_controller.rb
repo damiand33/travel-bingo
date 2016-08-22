@@ -9,5 +9,9 @@ class CardsController < ApplicationController
       @picture << f.image   
       @caption << f.caption
     end  
+
+   
   end
+
+
 end

@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   root 'cards#index'
   # get '/pages/airport-hard', :as => :hard
   get 'about', to: 'cards#about'
+  get 'state', to: 'states#state'
 
   #link_to :hard
 
