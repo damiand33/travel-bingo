@@ -14,20 +14,18 @@
       <%= link_to root_path do %>
         <%= image_tag 'bingo.png', class: 'img-title' %>
       <% end %>
-      <div class="pull-right links"    
-        <!-- Button trigger modal -->
-        <%= link_to 'Airport Card', root_path %>
-       
-        <%= link_to 'License Plate Card', state_path %>
-        
+      <br>
+      <div class="pull-left links" >          
+        <%= link_to 'Airport Card', root_path %>       
+        <%= link_to 'License Plate Card', state_path %>        
         <%= link_to 'About', about_path %>
+        <%= link_to 'Leave a Comment', '#' %>
       </div>    
     </div>
   </header>
-  <br>
-  <br>
-  <br>
+
   <div class="container">
+ 
     <%= yield %>
   </div>
 

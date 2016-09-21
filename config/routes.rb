@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   # get '/pages/airport-hard', :as => :hard
   get 'about', to: 'cards#about'
   get 'state', to: 'states#state'
+  get 'comment', to: 'cards#comment'
 
   #link_to :hard
 
